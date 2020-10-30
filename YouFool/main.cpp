@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 #include"myvector.h"
 #include"animal.h"
 #include"cat.h"
@@ -8,6 +9,8 @@
 #include"mymath.h"
 
 using namespace std;
+
+void PrintScores(const vector<int>& scores);
 
 int main()
 {
@@ -73,5 +76,22 @@ int main()
 	delete cat2;
 	delete cat3;
 	//////////////////////////////////////
+	/////////// Vector Sample ////////////
+	vector<int> scores;
+	scores.reserve(4);
+
+	scores.push_back(30);
+	scores.push_back(50);
+
+	PrintScores(scores);
+	//////////////////////////////////////
 	return 0;
+}
+
+void PrintScores(const vector<int>& scores)
+{
+	for (vector<int>::const_iterator iter = scores.begin(); iter != scores.end(); ++iter)
+	{
+		cout << *iter << endl;
+	}
 }
