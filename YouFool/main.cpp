@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<string>
 #include"myvector.h"
 #include"animal.h"
 #include"cat.h"
@@ -7,6 +8,7 @@
 #include"cat1.h"
 #include"bat.h"
 #include"mymath.h"
+#include"score.h"
 
 using namespace std;
 
@@ -84,6 +86,31 @@ int main()
 	scores.push_back(50);
 
 	PrintScores(scores);
+
+	vector<score*> myScores;
+	myScores.reserve(5);
+
+	myScores.push_back(new score(31, "C++"));
+	myScores.push_back(new score(40, "Java"));
+	myScores.push_back(new score(70, "Algorithm"));
+	myScores.push_back(new score(83, "C#"));
+	myScores.push_back(new score(100, "Android"));
+
+	for (vector<score*>::iterator iter = myScores.begin(); iter != myScores.end(); iter++)
+	{
+		score* curScore = *iter;
+		if (curScore->GetClassName() == "C++")
+		{
+			curScore->SetScore(100);
+		}
+		curScore->PrintVariables();
+	}
+
+	for (vector<score*>::iterator iter = myScores.begin(); iter != myScores.end(); iter++)
+	{
+		delete* iter;
+	}
+	myScores.clear();
 	//////////////////////////////////////
 	return 0;
 }

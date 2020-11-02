@@ -1,2 +1,14 @@
-﻿  main.cpp
-  YouFool.vcxproj -> C:\Users\현광빈\source\repos\YouFool\x64\Debug\YouFool.exe
+﻿  animal.cpp
+  bat.cpp
+  cat.cpp
+C:\Users\bio86\source\repos\cppstudy\YouFool\cat.cpp(13,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  cat1.cpp
+  dog.cpp
+C:\Users\bio86\source\repos\cppstudy\YouFool\dog.cpp(9,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  mymath.cpp
+  myvector.cpp
+  main.cpp
+  score.cpp
+  코드를 생성하고 있습니다...
+  LINK : C:\Users\bio86\source\repos\cppstudy\x64\Debug\YouFool.exe을(를) 찾을 수 없거나 마지막 증분 링크에 의해 빌드되지 않았습니다. 전체 링크를 수행하고 있습니다.
+  YouFool.vcxproj -> C:\Users\bio86\source\repos\cppstudy\x64\Debug\YouFool.exe
