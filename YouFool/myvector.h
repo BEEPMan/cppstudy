@@ -8,7 +8,6 @@ class Vector
 	friend inline ostream& operator<<(ostream& os, const Vector& rhs);
 	friend inline Vector operator*(int multiplier, const Vector& rhs);
 public:
-	Vector();
 	Vector(int x, int y);
 	Vector(const Vector& other);
 	inline int getX() const;

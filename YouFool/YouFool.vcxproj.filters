@@ -42,6 +42,9 @@
     <ClCompile Include="score.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="studentinfo.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="myvector.h">
@@ -72,6 +75,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="score.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="studentinfo.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

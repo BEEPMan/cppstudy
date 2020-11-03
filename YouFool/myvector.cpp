@@ -1,7 +1,5 @@
 #include"myvector.h"
 
-Vector::Vector(){}
-
 Vector::Vector(int x, int y) 
 	:	mX(x)
 	,	mY(y)

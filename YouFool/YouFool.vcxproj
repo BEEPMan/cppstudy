@@ -30,6 +30,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="score.cpp" />
+    <ClCompile Include="studentinfo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="animal.h" />
@@ -42,6 +43,7 @@
     <ClInclude Include="mymath.h" />
     <ClInclude Include="myvector.h" />
     <ClInclude Include="score.h" />
+    <ClInclude Include="studentinfo.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

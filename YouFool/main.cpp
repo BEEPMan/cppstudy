@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<map>
 #include<string>
 #include"myvector.h"
 #include"animal.h"
@@ -9,10 +10,12 @@
 #include"bat.h"
 #include"mymath.h"
 #include"score.h"
+#include"studentinfo.h"
 
 using namespace std;
 
 void PrintScores(const vector<int>& scores);
+void PrintMap(const map<studentinfo, int>& scores);
 
 int main()
 {
@@ -112,6 +115,15 @@ int main()
 	}
 	myScores.clear();
 	//////////////////////////////////////
+	///////////// Map Sample /////////////
+	map<studentinfo, int> studentScores;
+
+	studentScores.insert(pair<studentinfo, int>(studentinfo("Lulu", "A01234567"), 10));
+	studentScores.insert(pair<studentinfo, int>(studentinfo("Poppy", "A12345678"), 70));
+	studentScores.insert(pair<studentinfo, int>(studentinfo("Lulu", "A01234567"), 50));
+
+	PrintMap(studentScores);
+	//////////////////////////////////////
 	return 0;
 }
 
@@ -120,5 +132,13 @@ void PrintScores(const vector<int>& scores)
 	for (vector<int>::const_iterator iter = scores.begin(); iter != scores.end(); ++iter)
 	{
 		cout << *iter << endl;
+	}
+}
+
+void PrintMap(const map<studentinfo, int>& scores)
+{
+	for (map<studentinfo, int>::const_iterator iter = scores.begin(); iter != scores.end(); ++iter)
+	{
+		cout << iter->first.getStudentID()  << ", " << iter->first.getName() << "'s score: " << iter->second << endl;
 	}
 }
