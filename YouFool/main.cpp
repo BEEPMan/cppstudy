@@ -11,6 +11,7 @@
 #include"mymath.h"
 #include"score.h"
 #include"studentinfo.h"
+#include"fixedvector.h"
 
 using namespace std;
 
@@ -123,6 +124,15 @@ int main()
 	studentScores.insert(pair<studentinfo, int>(studentinfo("Lulu", "A01234567"), 50));
 
 	PrintMap(studentScores);
+	//////////////////////////////////////
+	/////////// Template Sample //////////
+	fixedvector<int, 5> v;
+	cout << "Capacity: " << v.getCapacity() << ", Size: " << v.getSize() << ", Success: " << v.add(15) << endl;
+	cout << "Capacity: " << v.getCapacity() << ", Size: " << v.getSize() << ", Success: " << v.add(14) << endl;
+	cout << "Capacity: " << v.getCapacity() << ", Size: " << v.getSize() << ", Success: " << v.add(56) << endl;
+	cout << "Capacity: " << v.getCapacity() << ", Size: " << v.getSize() << ", Success: " << v.add(3) << endl;
+	cout << "Capacity: " << v.getCapacity() << ", Size: " << v.getSize() << ", Success: " << v.add(87) << endl;
+	cout << "Capacity: " << v.getCapacity() << ", Size: " << v.getSize() << ", Success: " << v.add(34) << endl;
 	//////////////////////////////////////
 	return 0;
 }

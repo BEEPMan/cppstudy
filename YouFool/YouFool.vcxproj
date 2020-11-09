@@ -38,6 +38,7 @@
     <ClInclude Include="cat.h" />
     <ClInclude Include="cat1.h" />
     <ClInclude Include="dog.h" />
+    <ClInclude Include="fixedvector.h" />
     <ClInclude Include="iflyable.h" />
     <ClInclude Include="iwalkable.h" />
     <ClInclude Include="mymath.h" />
