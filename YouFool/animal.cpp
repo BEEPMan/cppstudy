@@ -1,7 +1,5 @@
 #include "animal.h"
 
-Animal::Animal() {}
-
 Animal::Animal(int age)
 	:mAge(age)
 {}

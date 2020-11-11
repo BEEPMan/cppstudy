@@ -6,7 +6,7 @@ using namespace std;
 class Animal
 {
 public:
-	Animal();
+	Animal() = default;
 	Animal(int age);
 	virtual ~Animal();
 	virtual void Move();

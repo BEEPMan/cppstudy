@@ -134,12 +134,28 @@ int main()
 	cout << "Capacity: " << v.getCapacity() << ", Size: " << v.getSize() << ", Success: " << v.add(87) << endl;
 	cout << "Capacity: " << v.getCapacity() << ", Size: " << v.getSize() << ", Success: " << v.add(34) << endl;
 	//////////////////////////////////////
+	///////////// etc Sample /////////////
+	int nullint = NULL;
+	int* nullp = NULL;
+	// int nullint = nullptr;	ERROR
+	int* nullpt = nullptr;
+
+	enum class eColor
+	{
+		Red,
+		Green,
+		Blue
+	};
+
+	// cout << eColor::Green << endl;	ERROR(Explicit Casting Only)
+	cout << static_cast<int>(eColor::Green) << endl;
+	//////////////////////////////////////
 	return 0;
 }
 
 void PrintScores(const vector<int>& scores)
 {
-	for (vector<int>::const_iterator iter = scores.begin(); iter != scores.end(); ++iter)
+	for (auto iter = scores.begin(); iter != scores.end(); ++iter)
 	{
 		cout << *iter << endl;
 	}
@@ -147,7 +163,7 @@ void PrintScores(const vector<int>& scores)
 
 void PrintMap(const map<studentinfo, int>& scores)
 {
-	for (map<studentinfo, int>::const_iterator iter = scores.begin(); iter != scores.end(); ++iter)
+	for (auto iter = scores.begin(); iter != scores.end(); ++iter)
 	{
 		cout << iter->first.getStudentID()  << ", " << iter->first.getName() << "'s score: " << iter->second << endl;
 	}

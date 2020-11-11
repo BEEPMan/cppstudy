@@ -2,13 +2,13 @@
 #include "animal.h"
 #include <string.h>
 
-class Cat : public Animal
+class Cat final : public Animal
 {
 public:
 	Cat();
 	Cat(int age, const char* name);
 	virtual ~Cat();
-	void Move();
+	void Move() override;
 	void Speak();
 	char* getName() const;
 	static int mCatCount;
