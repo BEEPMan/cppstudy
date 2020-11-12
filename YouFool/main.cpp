@@ -2,6 +2,7 @@
 #include<vector>
 #include<map>
 #include<string>
+#include<unordered_map>
 #include"myvector.h"
 #include"animal.h"
 #include"cat.h"
@@ -149,6 +150,23 @@ int main()
 
 	// cout << eColor::Green << endl;	ERROR(Explicit Casting Only)
 	cout << static_cast<int>(eColor::Green) << endl;
+
+	unordered_map<string, int> unorderedscores;
+	unorderedscores["Tom"] = 50;
+	unorderedscores["Lulu"] = 90;
+	unorderedscores["Kim"] = 30;
+	for (auto i : unorderedscores)
+	{
+		i.second += 10;
+		cout << i.first << ": " << i.second << endl;
+	}
+	for (auto& i : unorderedscores)
+	{
+		cout << i.first << ": " << i.second << endl;
+	}
+	//////////////////////////////////////
+	//////// Smart Pointer Sample ////////
+
 	//////////////////////////////////////
 	return 0;
 }
