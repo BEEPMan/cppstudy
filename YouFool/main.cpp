@@ -3,6 +3,7 @@
 #include<map>
 #include<string>
 #include<unordered_map>
+#include<memory>
 #include"myvector.h"
 #include"animal.h"
 #include"cat.h"
@@ -166,7 +167,11 @@ int main()
 	}
 	//////////////////////////////////////
 	//////// Smart Pointer Sample ////////
-
+	unique_ptr<Vector> uniquevecptr = make_unique<Vector>(5, 4);
+	cout << uniquevecptr->getX() << endl;
+	uniquevecptr.reset(new Vector(3, 4));
+	unique_ptr<Vector> anothervecptr(move(uniquevecptr));
+	cout << *anothervecptr << endl;
 	//////////////////////////////////////
 	return 0;
 }
