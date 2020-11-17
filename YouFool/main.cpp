@@ -172,6 +172,16 @@ int main()
 	uniquevecptr.reset(new Vector(3, 4));
 	unique_ptr<Vector> anothervecptr(move(uniquevecptr));
 	cout << *anothervecptr << endl;
+
+	shared_ptr<Vector> sharedvecptr = make_shared<Vector>(3, 4);
+	shared_ptr<Vector> anothershared = sharedvecptr;
+	cout << "RefCount: " << sharedvecptr.use_count() << endl;
+	anothershared = nullptr;
+	cout << "RefCount: " << sharedvecptr.use_count() << endl;
+
+	weak_ptr<Vector> weakvecptr = sharedvecptr;
+	cout << "RefCount: " << sharedvecptr.use_count() << endl;
+	cout << *(weakvecptr.lock()) << endl;
 	//////////////////////////////////////
 	return 0;
 }
