@@ -25,6 +25,7 @@
     <ClCompile Include="cat1.cpp" />
     <ClCompile Include="dog.cpp" />
     <ClCompile Include="mymath.cpp" />
+    <ClCompile Include="mystring.cpp" />
     <ClCompile Include="myvector.cpp" />
     <ClCompile Include="main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
@@ -42,6 +43,7 @@
     <ClInclude Include="iflyable.h" />
     <ClInclude Include="iwalkable.h" />
     <ClInclude Include="mymath.h" />
+    <ClInclude Include="mystring.h" />
     <ClInclude Include="myvector.h" />
     <ClInclude Include="score.h" />
     <ClInclude Include="studentinfo.h" />

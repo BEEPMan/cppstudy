@@ -4,6 +4,7 @@
 #include<string>
 #include<unordered_map>
 #include<memory>
+#include<cassert>
 #include"myvector.h"
 #include"animal.h"
 #include"cat.h"
@@ -14,11 +15,13 @@
 #include"score.h"
 #include"studentinfo.h"
 #include"fixedvector.h"
+#include"mystring.h"
 
 using namespace std;
 
 void PrintScores(const vector<int>& scores);
 void PrintMap(const map<studentinfo, int>& scores);
+mystring makeMyString();
 
 int main()
 {
@@ -183,6 +186,18 @@ int main()
 	cout << "RefCount: " << sharedvecptr.use_count() << endl;
 	cout << *(weakvecptr.lock()) << endl;
 	//////////////////////////////////////
+	/////// Move Constructor Sample //////
+	mystring originalstring("Lulu");
+	mystring copystring(originalstring);
+	mystring moveconstructorstring(makeMyString());
+
+	cout << moveconstructorstring.getString() << endl;
+
+	moveconstructorstring = move(originalstring);
+	cout << moveconstructorstring.getString() << endl;
+	assert(originalstring.getString() == nullptr);
+	cout << originalstring.getSize() << endl;
+	//////////////////////////////////////
 	return 0;
 }
 
@@ -200,4 +215,10 @@ void PrintMap(const map<studentinfo, int>& scores)
 	{
 		cout << iter->first.getStudentID()  << ", " << iter->first.getName() << "'s score: " << iter->second << endl;
 	}
+}
+
+mystring makeMyString()
+{
+	mystring tempString("Hello");
+	return tempString;
 }
