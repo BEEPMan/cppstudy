@@ -23,6 +23,11 @@ void PrintScores(const vector<int>& scores);
 void PrintMap(const map<studentinfo, int>& scores);
 mystring makeMyString();
 
+constexpr int fibonacci(int number)
+{
+	return (number < 2) ? number : fibonacci(number - 1) + fibonacci(number - 2);
+}
+
 int main()
 {
 	//////////// Class Sample ////////////
@@ -197,6 +202,14 @@ int main()
 	cout << moveconstructorstring.getString() << endl;
 	assert(originalstring.getString() == nullptr);
 	cout << originalstring.getSize() << endl;
+	//////////////////////////////////////
+	////////// Constexpr Sample //////////
+	constexpr int result = fibonacci(5);
+	//constexpr int result = fibonacci(31); Complie Error
+	cout << result << endl;
+	//////////////////////////////////////
+	//////////// Lambda Sample ///////////
+
 	//////////////////////////////////////
 	return 0;
 }
