@@ -22,6 +22,8 @@ using namespace std;
 void PrintScores(const vector<int>& scores);
 void PrintMap(const map<studentinfo, int>& scores);
 mystring makeMyString();
+template<typename T, typename... TArgs>
+T* Create(TArgs... args);
 
 constexpr int fibonacci(int number)
 {
@@ -209,7 +211,28 @@ int main()
 	cout << result << endl;
 	//////////////////////////////////////
 	//////////// Lambda Sample ///////////
-
+	int score1 = 50;
+	int score2 = 70;
+	int score3 = 10;
+	auto noCapture = []() {
+		cout << "noCpature result" << endl;
+	};
+	auto valueCapture = [=](int addedScore) {
+		//score1 += addedScore; Error
+		cout << "valueCapture result: " << score1 << ", " << score2 << endl;
+	};
+	auto refCapture = [&](int addedScore) {
+		score1 += addedScore;
+		cout << "refCapture result: " << score1 << ", " << score2 << endl;
+	};
+	noCapture();
+	valueCapture(score3);
+	refCapture(score3);
+	//////////////////////////////////////
+	////// Variadic Template Sample //////
+	int* i = Create<int>(5);
+	cout << *i << endl;
+	delete i;
 	//////////////////////////////////////
 	return 0;
 }
@@ -234,4 +257,12 @@ mystring makeMyString()
 {
 	mystring tempString("Hello");
 	return tempString;
+}
+
+template<typename T, typename... TArgs>
+T* Create(TArgs... args)
+{
+	cout << "Creating instance..." << endl;
+	T* object = new T(args...);
+	return object;
 }

@@ -1,3 +1,2 @@
 ﻿  main.cpp
-C:\Users\현광빈\source\repos\YouFool\YouFool\main.cpp(207,23): error C2131: 식이 상수로 계산되지 않았습니다.
-C:\Users\현광빈\source\repos\YouFool\YouFool\main.cpp(28,2): message : 단계 제한인 1048576을(를) 초과하는 식으로 인해 오류가 발생했습니다(/constexpr:steps<NUMBER>).
+  YouFool.vcxproj -> C:\Users\bio86\source\repos\cppstudy\x64\Debug\YouFool.exe
